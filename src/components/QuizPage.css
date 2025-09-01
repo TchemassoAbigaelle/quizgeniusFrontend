@@ -1,0 +1,145 @@
+/* Container général */
+.quiz-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+/* Header titre et progression */
+.quiz-header h1 {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #004085;
+}
+
+.quiz-header p {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Carte question */
+.quiz-card h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #222;
+}
+
+/* Liste options */
+.quiz-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Boutons option */
+.option-button,
+.selected-option {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 2.5px solid #cccccc;
+  background-color: #f7f7f7;
+  color: #333333;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  text-align: left;
+  user-select: none;
+}
+
+.option-button:hover {
+  background-color: #e2e2e2;
+  border-color: #999999;
+}
+
+/* Quand l'utilisateur choisit une option */
+.selected-option {
+  background-color: #dcdcdc;
+  border-color: #999999;
+  color: #222222;
+  cursor: default;
+}
+/* Container boutons navigation */
+.button-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Boutons navigation */
+.prev-btn,
+.next-btn,
+.quit-btn {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prev-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.prev-btn:disabled {
+  background-color: #b5b5b5;
+  cursor: not-allowed;
+}
+
+.next-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.next-btn:disabled {
+  background-color: #a2c7ff;
+  cursor: not-allowed;
+}
+
+.quit-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.prev-btn:hover:not(:disabled) {
+  background-color: #5a6268;
+}
+
+.next-btn:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.quit-btn:hover {
+  background-color: #bd2130;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .button-container {
+    flex-direction: column;
+  }
+
+  .prev-btn,
+  .next-btn,
+  .quit-btn {
+    width: 100%;
+  }
+}
