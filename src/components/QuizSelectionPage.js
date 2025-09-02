@@ -22,7 +22,7 @@ function QuizSelectionPage() {
     const selectedDifficulty = difficulties[topic] || "Beginner";
 
     try {
-      const response = await axios.post('http://localhost:5000/generate-questions', { topic, difficulty: selectedDifficulty });
+      const response = await axios.post('https://quizgenius-backend.onrender.com/generate-questions', { topic, difficulty: selectedDifficulty });
       const questions = response.data.questions;
       navigate("/startquiz", { state: { questions, topic, difficulty: selectedDifficulty } });
     } catch (error) {
