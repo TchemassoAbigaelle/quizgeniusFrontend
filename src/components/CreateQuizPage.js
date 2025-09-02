@@ -19,7 +19,7 @@ function CreateQuizPage() {
     setError(null);
 
     try {
-      const res = await axios.post("http://localhost:5000/submit-quiz", {
+      const res = await axios.post("https://quizgenius-backend.onrender.com/submit-quiz", {
         topic: inputText,
         difficulty,
       });
